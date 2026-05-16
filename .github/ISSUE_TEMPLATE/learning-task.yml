@@ -1,0 +1,25 @@
+name: Learning Task
+description: Track a task that exists mainly to build understanding
+title: "[Learning] "
+labels: ["type: learning"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Learning Goal
+      description: What should be understood after this task?
+    validations:
+      required: true
+  - type: textarea
+    id: exercise
+    attributes:
+      label: Exercise
+      description: What will be built or explained?
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: Proof of Understanding
+      description: How will we know the topic was learned?
+

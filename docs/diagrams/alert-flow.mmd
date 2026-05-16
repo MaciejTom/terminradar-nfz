@@ -1,0 +1,17 @@
+sequenceDiagram
+  participant Job as BullMQ Job
+  participant Api as NestJS API
+  participant NFZ as NFZ API
+  participant DB as PostgreSQL
+  participant Alert as Alert Detector
+  participant Mail as Email Provider
+
+  Job->>Api: Load active subscription
+  Api->>NFZ: Fetch current queue data
+  NFZ-->>Api: Return public queue state
+  Api->>DB: Store queue snapshot
+  Api->>Alert: Compare with previous snapshot
+  Alert->>DB: Create alert event if improved
+  Alert->>Mail: Send notification email
+  Mail-->>DB: Log email result
+

@@ -1,0 +1,48 @@
+erDiagram
+  users ||--o{ subscriptions : owns
+  subscriptions ||--o{ queue_snapshots : has
+  subscriptions ||--o{ alert_events : triggers
+  queue_snapshots ||--o{ alert_events : previous_or_new
+  alert_events ||--o{ email_logs : sends
+
+  users {
+    uuid id
+    string email
+    string password_hash
+    datetime created_at
+  }
+
+  subscriptions {
+    uuid id
+    uuid user_id
+    string benefit_name
+    string province_code
+    string locality
+    boolean is_active
+  }
+
+  queue_snapshots {
+    uuid id
+    uuid subscription_id
+    string provider_code
+    date first_available_date
+    int waiting_count
+    datetime snapshot_at
+  }
+
+  alert_events {
+    uuid id
+    uuid subscription_id
+    string event_type
+    json payload
+    datetime created_at
+  }
+
+  email_logs {
+    uuid id
+    uuid alert_event_id
+    string recipient_email
+    string status
+    datetime created_at
+  }
+

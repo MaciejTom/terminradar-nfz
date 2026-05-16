@@ -1,0 +1,30 @@
+name: Technical Task
+description: Track implementation, refactoring or infrastructure work
+title: "[Tech] "
+labels: ["type: tech-debt"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What technical problem are we solving?
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Plan
+      description: Proposed implementation steps.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks / Trade-offs
+

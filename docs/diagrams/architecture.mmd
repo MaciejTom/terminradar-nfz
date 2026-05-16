@@ -1,0 +1,10 @@
+flowchart LR
+  User["User"] --> Web["Next.js Web App"]
+  Web --> Api["NestJS API"]
+  Api --> Nfz["NFZ Public API"]
+  Api --> Postgres["PostgreSQL"]
+  Api --> Redis["Redis"]
+  Redis --> BullMQ["BullMQ Workers"]
+  BullMQ --> Api
+  Api --> Mail["Email Provider"]
+

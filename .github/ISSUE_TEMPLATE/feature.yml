@@ -1,0 +1,32 @@
+name: Feature
+description: Plan a user-visible feature
+title: "[Feature] "
+labels: ["type: feature"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this feature needed?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is included?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: What must be true for this to be done?
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of Scope
+      description: What is intentionally excluded?
+
