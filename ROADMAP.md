@@ -2,7 +2,7 @@
 
 ## Phase 0 - Project Foundation
 
-Status: **In progress**
+Status: **Done**
 
 Goal: make the repository look and feel like a professional project before implementation starts.
 
@@ -24,12 +24,14 @@ Learning focus:
 
 ## Phase 1 - Search MVP
 
+Status: **In progress**
+
 Goal: a user can search NFZ treatment queues through a real Next.js UI backed by a NestJS API.
 
 Planned deliverables:
 
-- `apps/web` Next.js app
-- `apps/api` NestJS app
+- `apps/web` Next.js app - scaffolded
+- `apps/api` NestJS app - scaffolded
 - `packages/shared` contracts package
 - NFZ API client
 - queue search endpoint
@@ -115,4 +117,3 @@ Learning focus:
 - deployment trade-offs
 - operational documentation
 - explaining architecture during interviews
-

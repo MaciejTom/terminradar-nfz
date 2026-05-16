@@ -23,7 +23,7 @@ apps/api        NestJS backend
 packages/shared shared contracts, schemas and domain types
 ```
 
-These folders are intentionally not created in Phase 0. They will be scaffolded when implementation starts.
+`apps/web` and `apps/api` were scaffolded at the start of Phase 1. `packages/shared` will be added when the first shared contract is needed.
 
 ## Backend Responsibilities
 
@@ -68,4 +68,3 @@ web -> api/search -> NfzModule -> NFZ API -> mapper -> web
 Monitoring flow:
 BullMQ job -> subscription -> NFZ API -> snapshot -> alert detector -> email
 ```
-

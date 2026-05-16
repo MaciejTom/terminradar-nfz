@@ -36,9 +36,14 @@ The app does not book visits, provide medical advice or store sensitive medical 
 
 ## Repository Status
 
-Current phase: **Phase 0 - Project foundation**.
+Current phase: **Phase 1 - Application scaffold**.
 
-This repository currently contains planning, architecture and delivery documents only. Application folders such as `apps/web` and `apps/api` will be created in the next phase.
+The repository now contains the initial monorepo scaffold:
+
+- `apps/web` - Next.js frontend
+- `apps/api` - NestJS backend
+
+The first product features will be implemented in small, reviewable slices.
 
 ## Review Path
 
@@ -73,5 +78,10 @@ docker compose up -d
 pnpm dev
 ```
 
-This will become available after the monorepo apps are scaffolded.
+The app-specific development commands are:
+
+```bash
+pnpm dev:web
+pnpm dev:api
+```
 

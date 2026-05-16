@@ -5,15 +5,19 @@
   "description": "Fullstack TypeScript portfolio project for searching and monitoring public NFZ treatment queue data.",
   "packageManager": "pnpm@9.15.0",
   "scripts": {
-    "check:repo": "node -e \"console.log('Repository skeleton is ready')\"",
-    "dev": "echo \"Apps are not scaffolded yet. Create apps/web and apps/api in Phase 1.\"",
-    "lint": "echo \"Lint will be enabled after app scaffolding.\"",
-    "test": "echo \"Tests will be enabled after app scaffolding.\"",
-    "build": "echo \"Build will be enabled after app scaffolding.\""
+    "build": "turbo run build",
+    "check:repo": "turbo run lint test build",
+    "dev": "turbo run dev",
+    "dev:api": "pnpm --filter @terminradar/api dev",
+    "dev:web": "pnpm --filter @terminradar/web dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
   },
   "engines": {
     "node": ">=20.11.0",
     "pnpm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "turbo": "^2.9.14"
   }
 }
-
